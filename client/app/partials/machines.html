@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<div class="container-fluid">
+  <div class="row">
+    <div class="machine-quick-view col-xs-12" ng-repeat="machine in ctrl.machines track by $index">
+      <div class="box" style="background-color: {{machine.color}}">
+        <div class="header">
+          <div class="data-source col-lg-6">{{machine.sourceMeter}} <span
+              ng-class="{active: machine.sourcePoint == 'L1'}">L1,</span><span
+              ng-class="{active: machine.sourcePoint == 'L2'}">L2,</span><span
+              ng-class="{active: machine.sourcePoint == 'L3'}">L3,</span><span
+              ng-class="{active: machine.sourcePoint == 'N'}">N</span>
+          </div>
+          <div class="status-symbol col-lg-6">
+            <i class="fa fa-wifi"></i>
+          </div>
+        </div>
+
+        <div class="title" style="background-color: {{machine.minorColor}}">
+          <a ui-sref="machine({name: machine.code})">
+            <p class="code">{{ machine.code }}</p>
+            <p class="pretty-name">{{ machine.prettyName }}</p>
+          </a>
+        </div>
+        <div class="chart col-lg-12">
+          <highchart config="machine.highchartConfig"></highchart>
+        </div>
+        <div class="col-lg-12 footer">
+          <div class="col-lg-6 measureDateTime">
+            <p>{{ machine.measureDate }}</p>
+            <p>{{ machine.measureTime }}</p>
+          </div>
+          <div class="col-lg-6 measureValue">
+            {{ machine.value }} <span class="small">{{ machine.unit }}</span>
+          </div>
+        </div>
+      </div>
+      <p class="status">{{ machine.prettyStatus }}</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,139 @@
+nav {
+  &.navbar {
+    min-height: 30px;
+  }
+  &.navbar-inverse {
+    background-color: black;
+  }
+  .navbar-nav > li a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  img {
+    padding-top: 10px;
+    height: 30px;
+    width: auto;
+  }
+}
+
+div.canvas {
+  margin-top: 55px;
+  div.row.bordered {
+    &:not(:last-child) {
+      border-bottom: 5px solid #ddd;
+    }
+    .left-border {
+      border-left: 2px solid #ddd;
+    }
+    .right-border {
+      border-left: 2px solid #ddd;
+    }
+    > div:first-child > div {
+      &.smiley {
+        border-right-width: 0;
+        padding: 65px 15px;
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  [class*="col-"] {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+div.container-fluid .machine-quick-view {
+  width: 150px;
+  padding: 0 15px;
+  .box {
+    border: 1px solid black;
+    overflow: auto;
+    .header {
+      overflow: auto;
+      .data-source {
+        font-size: 10px;
+        padding-left: 3px;
+        span {
+          color: grey;
+          &.active {
+            color: @text-color;
+          }
+        }
+      }
+      .status-symbol {
+        padding-right: 3px;
+        text-align: right;
+        font-size: 18px;
+      }
+    }
+
+    .title {
+      a {
+        cursor: pointer;
+        color: @text-color;
+        p {
+          text-align: center;
+          margin: 0;
+          padding-bottom: 5px;
+          &.code {
+            font-size: 18px;
+          }
+          &.pretty-name {
+            line-height: 5px;
+          }
+        }
+      }
+    }
+
+    .chart {
+      overflow: hidden;
+    }
+
+    .footer {
+      .measureDateTime p {
+        font-size: 10px;
+        padding: 0;
+        margin: 0;
+        padding-left: 2px;
+      }
+      .measureValue {
+        padding-top: 5px;
+        text-align: right;
+        font-size: 13px;
+        padding-right: 2px;
+      }
+    }
+  }
+}
+
+.kpis {
+  h3 {
+    padding-left: 5px;
+  }
+  div {
+    text-align: center;
+    font-size: 12px;
+    border-bottom: 1px solid black;
+    span.large {
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
+  .error-log {
+    text-align: left;
+    padding: 10px;
+    border: 1px dashed black;
+    margin: 10px;
+  }
+}
+
+
+div.container-fluid.machine {
+  h1 {
+    padding-left: 15px;
+  }
+}

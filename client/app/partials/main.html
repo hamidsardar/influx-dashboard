@@ -1,0 +1,56 @@
+<div class="container-fluid">
+  <div class="row bordered">
+    <div class="col-md-8">
+      <div class="col-sm-8 col-xs-12">
+        <highchart id="peak-va-history" config="peakVaHistoryConfig"></highchart>
+      </div>
+      <div class="col-sm-1 col-xs-2 smiley left-border">
+        <img src="assets/images/smiley-good.jpg" ng-if="isPeakVaOk == true">
+        <img src="assets/images/smiley-bad.jpg" ng-if="isPeakVaOk == false">
+      </div>
+      <div class="col-sm-3 col-xs-10">
+        <highchart id="peak-va" config="peakVaCurrentConfig"></highchart>
+      </div>
+
+      <div class="col-sm-8">
+        <highchart id="rma-history" config="rmaHistoryConfig"></highchart>
+      </div>
+      <div class="col-sm-4 left-border">
+        <highchart id="rma-current" config="rmaCurrentConfig"></highchart>
+      </div>
+
+      <div class="col-sm-8">
+        <highchart id="ems-history" config="emsHistoryConfig"></highchart>
+      </div>
+      <div class="col-sm-4 left-border">
+        <highchart id="ems-current" config="emsCurrentConfig"></highchart>
+      </div>
+    </div>
+
+    <div class="col-md-4 left-border kpis">
+      <h3>Downtime</h3>
+      <div class="col-xs-3 kpi">OFF<br><span class="large">7:59</span></div>
+      <div class="col-xs-3 kpi">IDLE<br><span class="large">0:15</span></div>
+      <div class="col-xs-3 kpi">ON<br><span class="large">2:13</span></div>
+      <div class="col-xs-3 kpi">UNCLEAR<br><span class="large">10:13</span></div>
+      <div class="col-xs-12 error-log">
+        <h3>Error Log</h3>
+        <ul>
+          <li>5.12 16:04: Lorem ipsum</li>
+          <li>5.12 12:59: Lorem ipsum</li>
+          <li>5.12 6:00: Lorem ipsum</li>
+          <li>4.12 12:00: Lorem ipsum</li>
+          <li>2.12 2:00: Lorem ipsum</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!--
+  <footer class="footer">
+    <div class="container">
+        <p>Angular Fullstack v2.1.1 |
+          <a href="https://twitter.com/tyhenkel">@tyhenkel</a> |
+           <a href="https://github.com/DaftMonk/generator-angular-fullstack/issues?state=open">Issues</a></p>
+    </div>
+  </footer>
+  -->

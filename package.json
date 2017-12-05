@@ -13,7 +13,7 @@
     "errorhandler": "~1.0.0",
     "compression": "~1.0.1",
     "lodash": "^3",
-    "ejs": "~0.8.4",
+    "ejs": "2.5.5",
     "composable-middleware": "^0.3.0",
     "influx": "4.0.1",
     "moment": "^2"
